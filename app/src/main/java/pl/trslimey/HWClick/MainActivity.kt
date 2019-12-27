@@ -58,5 +58,4 @@ class MainActivity : AppCompatActivity() {
             txt_highscore.text = counter.toString()
         }
     }
-
 }
