@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         // Randomly change counter color
         var colorCode: String = "#"
-        for (i in 1..6) { colorCode += Random(counter*i).nextInt(5,12).toString(16) }
+        for (i in 1..6) { colorCode += Random(currentHighScore*i).nextInt(5,12).toString(16) }
         // Set the random background colours
         background.setBackgroundColor(Color.parseColor(colorCode))
         btn_clicker.setBackgroundColor(Color.parseColor(colorCode))
