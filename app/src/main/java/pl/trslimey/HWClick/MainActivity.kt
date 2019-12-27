@@ -23,14 +23,8 @@ class MainActivity : AppCompatActivity() {
         counter += 1
         // Prepare new counter string
         var counter_string: String = counter.toString()
-        if (counter == 1) {
-            counter_string += " Click"
-        } else {
-            counter_string += " Clicks"
-        }
-        if (counter == 69) {
-            counter_string += " (Nice)"
-        }
+        if (counter == 1) { counter_string += " Click" }
+        else { counter_string += " Clicks" }
         // Set counter text box to this string
         txt_counter.text = counter_string
         // Also randomly change counter color
@@ -38,8 +32,16 @@ class MainActivity : AppCompatActivity() {
         for (i in 1..6) {
             colorCode += Random(counter*i).nextInt(0,16).toString(16)
         }
-        //txt_counter.setTextColor(Color.parseColor(color_code))
+        // Set the random background colours
         background.setBackgroundColor(Color.parseColor(colorCode))
         btn_clicker.setBackgroundColor(Color.parseColor(colorCode))
+    }
+
+    fun writeHighScore() {
+        false
+    }
+
+    fun readHighScore() {
+        false
     }
 }
