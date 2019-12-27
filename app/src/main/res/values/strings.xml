@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HWClick</string>
+    <string name="click_me">Click Me!</string>
+    <string name="no_clicks_yet_text">No Clicks Yet!</string>
+</resources>
