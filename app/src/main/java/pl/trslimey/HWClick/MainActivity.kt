@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         // Also randomly change counter color
         var colorCode: String = "#"
         for (i in 1..6) {
-            colorCode += Random(counter*i).nextInt(0,16).toString(16)
+            colorCode += Random(counter*i).nextInt(5,12).toString(16)
         }
         // Set the random background colours
         background.setBackgroundColor(Color.parseColor(colorCode))
