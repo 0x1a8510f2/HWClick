@@ -13,6 +13,10 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 class MainActivity : AppCompatActivity() {
+    // Settings
+    val backgroundColorRangeLower = 5   // How dark should the darkest background colors be (darkest 0-16 brightest)
+    val backgroundColorRangeUpper = 12 // How bright should the brightest background colors be (darkest 0-16 brightest)
+
     // Create score counter
     var counter: Int = 0
 
@@ -29,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         // Randomly change counter color
         var colorCode: String = "#"
-        for (i in 1..6) { colorCode += Random(currentHighScore*i).nextInt(5,12).toString(16) }
+        for (i in 1..6) { colorCode += Random(currentHighScore*i).nextInt(backgroundColorRangeLower,backgroundColorRangeUpper).toString(16) }
         // Set the random background colours
         background.setBackgroundColor(Color.parseColor(colorCode))
         btn_clicker.setBackgroundColor(Color.parseColor(colorCode))
@@ -52,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         // Also randomly change counter color
         var colorCode: String = "#"
-        for (i in 1..6) { colorCode += Random(counter*i).nextInt(5,12).toString(16) }
+        for (i in 1..6) { colorCode += Random(counter*i).nextInt(backgroundColorRangeLower,backgroundColorRangeUpper).toString(16) }
         // Set the random background colours
         background.setBackgroundColor(Color.parseColor(colorCode))
         btn_clicker.setBackgroundColor(Color.parseColor(colorCode))
